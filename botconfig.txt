@@ -36,6 +36,14 @@ status = ONLINE
 songinstatus=true
 
 
+// This sets the prefix for the bot
+// The prefix is used to control the commands
+// If you use !!, the play command will be !!play
+// If you do not set this, the prefix will be a mention of the bot (@Botname play)
+
+prefix = "!"
+
+
 // If you set this, the bot will also use this prefix in addition to
 // the one provided above
 
