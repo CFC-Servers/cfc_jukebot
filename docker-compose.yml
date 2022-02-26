@@ -26,8 +26,6 @@ services:
     container_name: music-lavalink
     hostname: lavalink
     restart: unless-stopped
-    ports:
-      - "3035"
     networks:
       - lavalink-net
     volumes:
