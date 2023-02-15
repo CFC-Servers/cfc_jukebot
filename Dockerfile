@@ -1,11 +1,11 @@
-FROM node:16-alpine
+FROM node:18-alpine
 
 WORKDIR /usr/src/app
 
-COPY src/package*.json ./
+COPY rawon/package*.json ./
 
 RUN npm install
 
-COPY ./src .
+COPY ./rawon/* ./
 
-CMD [ "node", "index.js" ]
+CMD [ "npm", "start" ]

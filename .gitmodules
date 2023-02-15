@@ -1,3 +1,6 @@
 [submodule "src"]
 	path = src
 	url = https://github.com/SudhanPlayz/Discord-MusicBot.git
+[submodule "rawon"]
+	path = rawon
+	url = https://github.com/Clytage/rawon.git
