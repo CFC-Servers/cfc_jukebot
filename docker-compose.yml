@@ -7,11 +7,9 @@ services:
     container_name: discord-musicbot
     restart: unless-stopped
     environment:
-      - Token=${DISCORD_BOT_TOKEN}
-      - Spotify_ClientID=${SPOTIFY_CLIENT_ID}
-      - Spotify_ClientSecret=${SPOTIFY_CLIENT_SECRET}
-      - Discord_ClientID=${DISCORD_CLIENT_ID}
-      - Discord_ClientSecret=${DISCORD_CLIENT_SECRET}
+      - token=${DISCORD_BOT_TOKEN}
+      - clientId=${DISCORD_CLIENT_ID}
+      - clientSecret=${DISCORD_CLIENT_SECRET}
     ports:
       - "127.0.0.1:3033:80"
     networks:
@@ -19,7 +17,7 @@ services:
     depends_on:
       - lavalink
     volumes:
-      - ./botconfig.js:/usr/src/app/botconfig.js:ro
+      - ./config.js:/usr/src/app/config.js:ro
 
   lavalink:
     image: fredboat/lavalink:dev
