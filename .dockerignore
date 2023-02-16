@@ -1,0 +1,12 @@
+src/.git
+src/.gitignore
+src/.replit
+src/*.md
+src/docker-compose.yml
+src/.github
+src/docker
+src/Dockerfile
+src/kickstartReplit.sh
+src/Procfile
+src/renovate.json
+src/replit.nix

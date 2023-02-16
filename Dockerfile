@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:17.9.1-bullseye-slim
 
 WORKDIR /usr/src/app
 
@@ -7,6 +7,9 @@ RUN npm install
 
 COPY ./src .
 
-RUN npm run deploy
+# We will use our own
+RUN rm -v ./config.js
 
-CMD [ "node", "index.js" ]
+COPY ./entrypoint.sh .
+
+ENTRYPOINT ["/usr/src/app/entrypoint.sh"]

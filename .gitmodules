@@ -1,0 +1,4 @@
+[submodule "src"]
+	path = src
+	url = git@github.com:SudhanPlayz/Discord-MusicBot.git
+	branch = v5
