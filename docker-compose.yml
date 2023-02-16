@@ -3,6 +3,7 @@ version: "3"
 services:
   rawon-musicbot:
     build: .
+    env_file: .env
     image: rawon-musicbot:latest
     container_name: rawon-musicbot
     ports:
@@ -13,5 +14,6 @@ services:
       - NODE_ENV=production
       - NODE_OPTIONS=--experimental-specifier-resolution=node
       - CI=true
+      - DISCORD_TOKEN=${DISCORD_TOKEN-""}
     volumes:
       - ./.rawon.env:/usr/src/app/.env:ro
