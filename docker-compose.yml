@@ -5,8 +5,13 @@ services:
     build: .
     image: rawon-musicbot:latest
     container_name: rawon-musicbot
-    restart: unless-stopped
     ports:
       - "127.0.0.1:3033:80"
+    environment:
+      - DOTENV_CONFIG_DEBUG=true
+      - DOTENV_CONFIG_PATH=/usr/src/app/.env
+      - NODE_ENV=production
+      - NODE_OPTIONS=--experimental-specifier-resolution=node
+      - CI=true
     volumes:
-      - ./.env:/usr/src/app/.env
+      - ./.rawon.env:/usr/src/app/.env:ro
